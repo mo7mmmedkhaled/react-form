@@ -169,7 +169,7 @@ const FormCard = () => {
                 )}
               </div>
               {toogle4 && (
-                <div className="popup-fig-right">
+                <div className="popup-fig-right-special">
                   <DistancePop donehand={DestanceFun} />
                 </div>
               )}
@@ -184,7 +184,7 @@ const FormCard = () => {
                 )}
               </div>
               {toogle5 && (
-                <div className="popup-fig-left">
+                <div className="popup-fig-right-special">
                   <PricePop donehand={priceFun} />
                 </div>
               )}

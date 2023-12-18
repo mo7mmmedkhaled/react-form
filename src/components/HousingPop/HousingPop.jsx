@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const HousingPop = (props) => {
   const [toggle, setToogle] = useState(false);
@@ -13,29 +13,29 @@ const HousingPop = (props) => {
     props.donehand(select);
   };
   const items2 = [
-    'شقه',
-    'تاون هاوس',
-    'فيلا',
-    'توين هاوس',
-    'دوبلكس',
-    'غرفه',
-    'بنتهاوس',
-    'عقارات سكنية',
-    'شاليه',
+    "شقه",
+    "تاون هاوس",
+    "فيلا",
+    "توين هاوس",
+    "دوبلكس",
+    "غرفه",
+    "بنتهاوس",
+    "عقارات سكنية",
+    "شاليه",
   ];
 
   const items = [
-    'مكتب',
-    'مطعم وكافيه',
-    'مجمع تجاري',
-    'محلات تجاريه',
-    'مستودع',
-    'عقارات تجاريه',
-    'عياده',
-    'زراعي',
-    'مصنع',
-    'صناعي',
-    'جراج',
+    "مكتب",
+    "مطعم وكافيه",
+    "مجمع تجاري",
+    "محلات تجاريه",
+    "مستودع",
+    "عقارات تجاريه",
+    "عياده",
+    "زراعي",
+    "مصنع",
+    "صناعي",
+    "جراج",
   ];
 
   return (
@@ -44,7 +44,7 @@ const HousingPop = (props) => {
         <span className="col-6">
           <button
             type="button"
-            class={toggle ? 'buttn' : 'active-buttn'}
+            class={toggle ? "buttn" : "active-buttn"}
             onClick={() => setToogle(false)}
           >
             سكني
@@ -53,7 +53,7 @@ const HousingPop = (props) => {
         <span className="col-6">
           <button
             type="button"
-            class={toggle ? 'active-buttn' : 'buttn'}
+            class={toggle ? "active-buttn" : "buttn"}
             onClick={() => setToogle(true)}
           >
             تجاري
@@ -67,7 +67,9 @@ const HousingPop = (props) => {
               {items2.map((item, index) => (
                 <li
                   key={index}
-                  className={`${index === activeItem ? 'active' : ''}`}
+                  className={`sinle-Item ${
+                    index === activeItem ? "active" : ""
+                  }`}
                   onClick={() => handleItemClick(item, index)}
                 >
                   {item}
@@ -84,7 +86,7 @@ const HousingPop = (props) => {
               {items.map((item, index) => (
                 <li
                   key={index}
-                  className={`${index === activeItem ? 'active' : ''}`}
+                  className={`sinle-Item ${index === activeItem ? "active" : ""}`}
                   onClick={() => handleItemClick(item, index)}
                 >
                   {item}
@@ -95,20 +97,24 @@ const HousingPop = (props) => {
         </>
       )}
       <div className="row">
-        <button
-          className="col-6 btn btn-outline-success p-3"
-          type="button"
-          onClick={() => setToogle(false)}
-        >
-          إعادة ظبط
-        </button>
-        <button
-          type="button"
-          className="col-6 btn btn-success p-3"
-          onClick={DoneHandeller}
-        >
-          تم
-        </button>
+        <div className="col-6">
+          <button
+            className="btn btn-outline-success p-2"
+            type="button"
+            onClick={() => setToogle(false)}
+          >
+            إعادة ظبط
+          </button>
+        </div>
+        <div className="col-6">
+          <button
+            type="button"
+            className="btn btn-success p-2"
+            onClick={DoneHandeller}
+          >
+            تم
+          </button>
+        </div>
       </div>
     </div>
   );

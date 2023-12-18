@@ -2,7 +2,7 @@
   font-size: 12px;
   font-weight: 700;
   color: #4c4a4a;
-  margin: 0 0.5rem 1.1rem;
+  margin: 0 0 1.1rem;
   font-family: 'Cairo', sans-serif;
 }
 .check-div {
@@ -41,6 +41,7 @@
   list-style-type: none;
   gap: 5px;
   flex-wrap: wrap;
+  padding: 0 !important;
 }
 .sinle-Item {
   border: 1px solid rgb(105, 105, 105);

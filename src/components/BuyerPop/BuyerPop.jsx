@@ -9,6 +9,7 @@ const BuyerPop = (props) => {
   const handleItemClick = (item, index) => {
     setActiveItem(index);
     setSelect(item);
+
   };
   const DoneHandeller = () => {
     props.donehand(select);

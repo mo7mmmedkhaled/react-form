@@ -18,9 +18,9 @@ const PricePop = (props) => {
 
   return (
     <div className="container">
-      <div className="row check-div">
-        <span className="col-6">أقل سعر</span>
-        <span className="col-6">أعلى سعر</span>
+      <div className="row">
+        <span className="col-6 title-cont">أقل سعر</span>
+        <span className="col-6 title-cont">أعلى سعر</span>
       </div>
       <div className="row">
         <div className="col-6">
@@ -47,16 +47,20 @@ const PricePop = (props) => {
         </div>
       </div>
       <div className="row">
-        <button className="col-6 btn btn-outline-success p-3" type="button">
-          إعادة ظبط
-        </button>
-        <button
-          type="button"
-          className="col-6 btn btn-success p-3"
-          onClick={DoneHandeller}
-        >
-          تم
-        </button>
+        <div className="col-6">
+          <button className="btn btn-outline-success p-2" type="button">
+            إعادة ظبط
+          </button>
+        </div>
+        <div className="col-6">
+          <button
+            type="button"
+            className="btn btn-success p-2"
+            onClick={DoneHandeller}
+          >
+            تم
+          </button>
+        </div>
       </div>
     </div>
   );
