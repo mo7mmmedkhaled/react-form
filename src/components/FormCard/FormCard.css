@@ -74,27 +74,27 @@
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
-  top: 46px;
+  top: 58px;
   z-index: 100;
   left: 0;
-  width: 230px;
+  width: 90%;
   border-radius: 8px;
 }
 .popup-fig-right {
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
-  top: 46px;
+  top: 58px;
   z-index: 100;
-  right: 0;
-  width: 230px;
+  left: 0;
+  width: 90%;
   border-radius: 8px;
 }
 .popup-fig-right-special {
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
-  top: 46px;
+  top: 58px;
   z-index: 100;
   left: 0;
   width: 350px;
@@ -121,7 +121,7 @@
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 55px;
+  left: 16px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;

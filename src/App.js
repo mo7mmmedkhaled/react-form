@@ -13,7 +13,7 @@ function App() {
       </div>
       <div className="row justify-content-center">
         <div className="col-1 text-center">
-          <NavLink className="text-center link-route" to="/">
+          <NavLink className="text-center link-route" to="/react-form">
             للبيع
           </NavLink>
         </div>
@@ -24,7 +24,7 @@ function App() {
         </div>
       </div>
       <Routes>
-        <Route path="/" element={<ForSell />}></Route>
+        <Route path="/react-form" element={<ForSell />}></Route>
         <Route path="/للإيجار" element={<ForRent />}></Route>
       </Routes>
     </div>
