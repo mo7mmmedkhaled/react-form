@@ -7,6 +7,7 @@ import HousingPop from '../HousingPop/HousingPop';
 import CountRoomPop from '../CountRoomPop/CountRoomPop';
 import DistancePop from '../DistancePop/DistancePop';
 import PricePop from '../PricePop/PricePop';
+// import { data } from '../../assets/dataSearchValue';
 
 const FormCard = () => {
   const [toogle, setToogle] = useState(false);
@@ -20,7 +21,7 @@ const FormCard = () => {
   const [contantB, setContentB] = useState('المساحة (متر مربع)');
   const [contantD, setContentD] = useState('السعر (ج.م)');
 
-  // const [inputvalue, setInputValue] = useState('');
+  const [inputvalue, setInputValue] = useState('');
 
   const clickHandeller = () => {
     setToogle(!toogle);
@@ -126,17 +127,17 @@ const FormCard = () => {
                     type="text"
                     placeholder="أدخل الموقع"
                     className="location-input"
-                    // onChange={(e) => setInputValue(e.target.value)}
-                    // value={inputvalue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    value={inputvalue}
                   />
                 </span>
                 <MdLocationOn className="icon" />
               </div>
-              {/* {inputvalue && (
-                <div className="popup-fig-right-special">
-                  <div>{inputvalue}</div>
+              {inputvalue && (
+                <div className="popup-fig-right-special col-12">
+                  {inputvalue}
                 </div>
-              )} */}
+              )}
             </div>
             <div className="col-3 position-relative">
               <div className="input-form" onClick={clickHandeller2}>

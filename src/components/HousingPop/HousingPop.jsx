@@ -44,7 +44,7 @@ const HousingPop = (props) => {
         <span className="col-6">
           <button
             type="button"
-            class={toggle ? 'buttn' : 'active-buttn'}
+            className={toggle ? 'buttn' : 'active-buttn'}
             onClick={() => setToogle(false)}
           >
             سكني
@@ -53,7 +53,7 @@ const HousingPop = (props) => {
         <span className="col-6">
           <button
             type="button"
-            class={toggle ? 'active-buttn' : 'buttn'}
+            className={toggle ? 'active-buttn' : 'buttn'}
             onClick={() => setToogle(true)}
           >
             تجاري

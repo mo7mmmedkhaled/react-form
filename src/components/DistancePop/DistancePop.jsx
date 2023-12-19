@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./DistancePop.css";
+import React, { useState } from 'react';
+import './DistancePop.css';
 
 const DistancePop = (props) => {
-  const [inp1, setInp1] = useState(null);
-  const [inp2, setInp2] = useState(null);
+  const [inp1, setInp1] = useState('');
+  const [inp2, setInp2] = useState('');
 
   const DoneHandeller = () => {
     props.donehand(inp1, inp2);

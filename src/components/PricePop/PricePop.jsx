@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import '../DistancePop/DistancePop.css';
 
 const PricePop = (props) => {
-  const [inp1, setInp1] = useState(null);
-  const [inp2, setInp2] = useState(null);
+  const [inp1, setInp1] = useState('');
+  const [inp2, setInp2] = useState('');
 
   const DoneHandeller = () => {
     props.donehand(inp1, inp2);
@@ -32,6 +32,7 @@ const PricePop = (props) => {
             name="أقل سعر"
             onChange={handleChange1}
             value={inp1}
+            min="10000"
           />
         </div>
         <div className="col-6">
@@ -43,6 +44,7 @@ const PricePop = (props) => {
             name="أعلى سعر"
             onChange={handleChange2}
             value={inp2}
+            max="10000000"
           />
         </div>
       </div>

@@ -1,29 +1,32 @@
-// import { Link, NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import FormCard from './components/FormCard/FormCard';
+import ForSell from './components/Components/ForSell';
+import ForRent from './components/Components/ForRent';
 
 function App() {
   return (
     <div className="container-fluid">
       <FormCard />
-      {/* <div className="row">
-        <h1 className="p-3 m-3 text-center">الأكثر بحثاً في مصر</h1>
+      <div className="row">
+        <h1 className="mt-5 mb-5 text-center">الأكثر بحثاً في مصر</h1>
       </div>
       <div className="row justify-content-center">
         <div className="col-1 text-center">
-          <NavLink className="text-center" to="/">
+          <NavLink className="text-center link-route" to="/">
             للبيع
           </NavLink>
         </div>
         <div className="col-1 text-center">
-          <Link className="text-center" to="/">
+          <NavLink className="text-center link-route" to="/للإيجار">
             للايجار
-          </Link>
+          </NavLink>
         </div>
       </div>
       <Routes>
-        <Route></Route>
-      </Routes> */}
+        <Route path="/" element={<ForSell />}></Route>
+        <Route path="/للإيجار" element={<ForRent />}></Route>
+      </Routes>
     </div>
   );
 }

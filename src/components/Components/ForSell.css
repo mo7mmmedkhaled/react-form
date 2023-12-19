@@ -1,0 +1,22 @@
+ul {
+  list-style-type: none;
+}
+.main-tag {
+  font-family: 'Cairo', sans-serif;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+}
+.secound-list {
+  padding: 10px 0px;
+}
+li {
+  font-family: 'Cairo', sans-serif;
+  font-size: 11px;
+  color: rgb(0, 0, 99);
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+.contain {
+  margin: 40px 174px 0px 80px;
+}
