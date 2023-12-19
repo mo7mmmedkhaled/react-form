@@ -9,7 +9,6 @@ const BuyerPop = (props) => {
   const handleItemClick = (item, index) => {
     setActiveItem(index);
     setSelect(item);
-
   };
   const DoneHandeller = () => {
     props.donehand(select);
@@ -52,7 +51,7 @@ const BuyerPop = (props) => {
                 <li
                   key={index}
                   className={`sinle-Item ${
-                    index === activeItem ? 'active' : ''
+                    index === activeItem ? 'active-chose' : ''
                   }`}
                   onClick={() => handleItemClick(item, index)}
                 >

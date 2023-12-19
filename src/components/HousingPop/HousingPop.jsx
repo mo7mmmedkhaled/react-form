@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const HousingPop = (props) => {
   const [toggle, setToogle] = useState(false);
@@ -13,29 +13,29 @@ const HousingPop = (props) => {
     props.donehand(select);
   };
   const items2 = [
-    "شقه",
-    "تاون هاوس",
-    "فيلا",
-    "توين هاوس",
-    "دوبلكس",
-    "غرفه",
-    "بنتهاوس",
-    "عقارات سكنية",
-    "شاليه",
+    'شقه',
+    'تاون هاوس',
+    'فيلا',
+    'توين هاوس',
+    'دوبلكس',
+    'غرفه',
+    'بنتهاوس',
+    'عقارات سكنية',
+    'شاليه',
   ];
 
   const items = [
-    "مكتب",
-    "مطعم وكافيه",
-    "مجمع تجاري",
-    "محلات تجاريه",
-    "مستودع",
-    "عقارات تجاريه",
-    "عياده",
-    "زراعي",
-    "مصنع",
-    "صناعي",
-    "جراج",
+    'مكتب',
+    'مطعم وكافيه',
+    'مجمع تجاري',
+    'محلات تجاريه',
+    'مستودع',
+    'عقارات تجاريه',
+    'عياده',
+    'زراعي',
+    'مصنع',
+    'صناعي',
+    'جراج',
   ];
 
   return (
@@ -44,7 +44,7 @@ const HousingPop = (props) => {
         <span className="col-6">
           <button
             type="button"
-            class={toggle ? "buttn" : "active-buttn"}
+            class={toggle ? 'buttn' : 'active-buttn'}
             onClick={() => setToogle(false)}
           >
             سكني
@@ -53,7 +53,7 @@ const HousingPop = (props) => {
         <span className="col-6">
           <button
             type="button"
-            class={toggle ? "active-buttn" : "buttn"}
+            class={toggle ? 'active-buttn' : 'buttn'}
             onClick={() => setToogle(true)}
           >
             تجاري
@@ -68,7 +68,7 @@ const HousingPop = (props) => {
                 <li
                   key={index}
                   className={`sinle-Item ${
-                    index === activeItem ? "active" : ""
+                    index === activeItem ? 'active-chose' : ''
                   }`}
                   onClick={() => handleItemClick(item, index)}
                 >
@@ -86,7 +86,9 @@ const HousingPop = (props) => {
               {items.map((item, index) => (
                 <li
                   key={index}
-                  className={`sinle-Item ${index === activeItem ? "active" : ""}`}
+                  className={`sinle-Item ${
+                    index === activeItem ? 'active-chose' : ''
+                  }`}
                   onClick={() => handleItemClick(item, index)}
                 >
                   {item}

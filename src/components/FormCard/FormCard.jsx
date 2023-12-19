@@ -20,6 +20,8 @@ const FormCard = () => {
   const [contantB, setContentB] = useState('المساحة (متر مربع)');
   const [contantD, setContentD] = useState('السعر (ج.م)');
 
+  // const [inputvalue, setInputValue] = useState('');
+
   const clickHandeller = () => {
     setToogle(!toogle);
     setToogleA(false);
@@ -99,7 +101,7 @@ const FormCard = () => {
   };
   return (
     <div className="main-form">
-      <div className="col-5">
+      <div className="col-xlg-5 col-lg-7 col-md-9">
         <div className="col-12 branch-form">
           <div className="row">
             <div className="col-3 position-relative">
@@ -117,17 +119,24 @@ const FormCard = () => {
                 </div>
               )}
             </div>
-            <div className="col-6">
+            <div className="col-6 position-relative">
               <div className="input-form">
                 <span>
                   <input
                     type="text"
                     placeholder="أدخل الموقع"
                     className="location-input"
+                    // onChange={(e) => setInputValue(e.target.value)}
+                    // value={inputvalue}
                   />
                 </span>
                 <MdLocationOn className="icon" />
               </div>
+              {/* {inputvalue && (
+                <div className="popup-fig-right-special">
+                  <div>{inputvalue}</div>
+                </div>
+              )} */}
             </div>
             <div className="col-3 position-relative">
               <div className="input-form" onClick={clickHandeller2}>

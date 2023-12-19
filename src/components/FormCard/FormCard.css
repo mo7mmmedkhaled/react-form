@@ -74,7 +74,7 @@
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
-  top: 58px;
+  top: 46px;
   z-index: 100;
   left: 0;
   width: 230px;
@@ -84,30 +84,29 @@
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
-  top: 58px;
+  top: 46px;
   z-index: 100;
   right: 0;
   width: 230px;
   border-radius: 8px;
 }
-.popup-fig-right-special{
+.popup-fig-right-special {
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
-  top: 58px;
+  top: 46px;
   z-index: 100;
   left: 0;
   width: 350px;
   border-radius: 8px;
-
 }
-.popup-fig-right-special::before{
+.popup-fig-right-special::before {
   content: '';
   position: absolute;
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 16px;
+  left: 18px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;
@@ -115,7 +114,6 @@
   filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.1));
   -webkit-filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
   filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
-
 }
 .popup-fig-right::before {
   content: '';
@@ -123,7 +121,7 @@
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 50px;
+  left: 55px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;
@@ -138,7 +136,7 @@
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 18px;
+  left: 19px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;
