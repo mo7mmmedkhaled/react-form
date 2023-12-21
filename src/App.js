@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<StartPage />} />
+        <Route path="/react-form" element={<StartPage />} />
         <Route path="/searchpage" element={<SearchPage />} />
       </Routes>
       <Footer />
