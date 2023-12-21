@@ -25,9 +25,7 @@ const SearchPage = () => {
           <ProductComp />
           <ProductComp />
         </div>
-        <div>
-          <Pagination />
-        </div>
+        <Pagination />
       </div>
     </div>
   );

@@ -6,7 +6,6 @@ import HousingPop from '../../HousingPop/HousingPop';
 import CountRoomPop from '../../CountRoomPop/CountRoomPop';
 import DistancePop from '../../DistancePop/DistancePop';
 import PricePop from '../../PricePop/PricePop';
-import { Link } from 'react-router-dom';
 import './SearchBar.css';
 
 const SearchBar = () => {

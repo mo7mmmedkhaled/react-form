@@ -2,9 +2,9 @@ import React from 'react';
 
 const Pagination = () => {
   return (
-    <div>
+    <div className="d-flex justify-content-center mt-5">
       <nav aria-label="...">
-        <ul className="pagination">
+        <ul className="pagination p-0">
           <li className="page-item disabled">
             <a className="page-link" href="/searchpage">
               Previous
