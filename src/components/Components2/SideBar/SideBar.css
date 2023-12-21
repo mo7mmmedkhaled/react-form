@@ -1,0 +1,10 @@
+.title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.card-title {
+  background-color: rgb(216, 216, 216);
+  padding: 3px 10px 3px 0px;
+  margin-bottom: 10px !important;
+}

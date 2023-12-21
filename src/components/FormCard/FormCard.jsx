@@ -7,24 +7,35 @@ import HousingPop from '../HousingPop/HousingPop';
 import CountRoomPop from '../CountRoomPop/CountRoomPop';
 import DistancePop from '../DistancePop/DistancePop';
 import PricePop from '../PricePop/PricePop';
+import { Link } from 'react-router-dom';
 // import { data } from '../../assets/dataSearchValue';
 
 const FormCard = () => {
-  const [toogle, setToogle] = useState(false);
+  const [toogle1, setToogle] = useState(false);
   const [toogle2, setToogleA] = useState(false);
   const [toogle3, setToogleB] = useState(false);
   const [toogle4, setToogleC] = useState(false);
   const [toogle5, setToogleD] = useState(false);
-  const [Buy, setBuy] = useState('للبيع');
-  const [contant, setContent] = useState('سكني');
+  const [contantC, setContent] = useState('سكني');
   const [contantA, setContentA] = useState('عدد الغرف & الحمامات');
   const [contantB, setContentB] = useState('المساحة (متر مربع)');
   const [contantD, setContentD] = useState('السعر (ج.م)');
+  const [contantE, setContentE] = useState('للبيع');
 
   const [inputvalue, setInputValue] = useState('');
 
-  const clickHandeller = () => {
-    setToogle(!toogle);
+  // useEffect(() => {
+  //   // Attach click event listener to the document
+  //   document.addEventListener('click', handleDocumentClick);
+
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     document.removeEventListener('click', handleDocumentClick);
+  //   };
+  // }, []);
+
+  const clickHandeller1 = () => {
+    setToogle(!toogle1);
     setToogleA(false);
     setToogleB(false);
     setToogleC(false);
@@ -71,7 +82,7 @@ const FormCard = () => {
   const chiledFun1 = (item2) => {
     if (item2) {
       setToogle(false);
-      setBuy(item2);
+      setContentE(item2);
     } else {
       return;
     }
@@ -100,27 +111,40 @@ const FormCard = () => {
       return;
     }
   };
+  // const handleDocumentClick = (event) => {
+  //   // Check if the click is outside the pop-up
+  //   console.log('Document Clicked');
+  //   const popup = document.getElementById('popup');
+  //   console.log('Popup Element:', popup);
+  //   if (popup && !popup.contains(event.target)) {
+  //     setToogleA(false);
+  //     setToogleB(false);
+  //     setToogleC(false);
+  //     setToogleD(false);
+  //   }
+  // };
+
   return (
     <div className="main-form">
-      <div className="col-xlg-5 col-lg-7 col-md-9">
+      <div className="col-xlg-7 col-lg-7 col-md-9">
         <div className="col-12 branch-form">
           <div className="row">
-            <div className="col-3 position-relative">
-              <div className="input-form" onClick={clickHandeller}>
-                <span>{Buy}</span>
-                {toogle ? (
+            <div id="popup" className="col-lg-3 col-md-6 position-relative">
+              <div className="input-form" onClick={clickHandeller1}>
+                <span>{contantE}</span>
+                {toogle1 ? (
                   <BsCaretUpFill className="icon" />
                 ) : (
                   <BsCaretDownFill className="icon" />
                 )}
               </div>
-              {toogle && (
+              {toogle1 && (
                 <div className="popup-fig-right">
                   <BuyerPop donehand={chiledFun1} />
                 </div>
               )}
             </div>
-            <div className="col-6 position-relative">
+            <div id="popup" className="col-lg-6 col-md-6 position-relative">
               <div className="input-form">
                 <span>
                   <input
@@ -139,9 +163,9 @@ const FormCard = () => {
                 </div>
               )}
             </div>
-            <div className="col-3 position-relative">
+            <div id="popup" className="col-lg-3 col-md-4 position-relative">
               <div className="input-form" onClick={clickHandeller2}>
-                <span>{contant}</span>
+                <span>{contantC}</span>
                 {toogle2 ? (
                   <BsCaretUpFill className="icon" />
                 ) : (
@@ -154,7 +178,7 @@ const FormCard = () => {
                 </div>
               )}
             </div>
-            <div className="col-3 position-relative">
+            <div id="popup" className="col-lg-3 col-md-4 position-relative">
               <div className="input-form" onClick={clickHandeller3}>
                 <span>{contantA}</span>
                 {toogle3 ? (
@@ -169,7 +193,7 @@ const FormCard = () => {
                 </div>
               )}
             </div>
-            <div className="col-3 position-relative">
+            <div id="popup" className="col-lg-3 col-md-4 position-relative">
               <div className="input-form" onClick={clickHandeller4}>
                 <span>{contantB}</span>
                 {toogle4 ? (
@@ -184,7 +208,7 @@ const FormCard = () => {
                 </div>
               )}
             </div>
-            <div className="col-3 position-relative">
+            <div id="popup" className="col-lg-3 col-md-6 position-relative">
               <div className="input-form" onClick={clickHandeller5}>
                 <span>{contantD}</span>
                 {toogle5 ? (
@@ -199,11 +223,11 @@ const FormCard = () => {
                 </div>
               )}
             </div>
-            <div className="col-3 ">
+            <div className="col-lg-3 col-md-6 ">
               <div className="input-form color-gre">
-                <a href="/" className="link-search">
+                <Link to="/searchpage" className="link-search">
                   ابحث
-                </a>
+                </Link>
               </div>
             </div>
           </div>

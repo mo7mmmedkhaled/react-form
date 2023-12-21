@@ -1,60 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
-
-.main-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 350px;
-  background-image: url('../../../public/img1.jpg');
-  background-size: cover;
-  background-position: 50%;
-  border-radius: 15px;
-}
-.branch-form {
-  background-color: rgb(0 0 0 / 68%);
-  padding: 14px;
-  border-radius: 10px;
-}
-.input-form {
-  height: 3rem;
+.button-1 {
+  cursor: pointer;
+  border: 0.1rem solid #dedede;
   border-radius: 0.8rem;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 10px;
+  font-family: 'Cairo', sans-serif;
   position: relative;
   color: #222;
   font-weight: 400;
-  background-color: #fff;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
-.input-form span {
-  font-size: 12px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  cursor: pointer;
-  padding: 0px 10px;
-  font-family: 'Cairo', sans-serif;
-  font-weight: 600;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
+
 .location-input {
   border: none;
   width: 100%;
 }
-.icon {
-  font-size: 36px;
-  padding-left: 16px;
-  color: #363636;
-}
-.link-search {
+.link-search-search {
   text-decoration: none;
   color: #ffffff;
   width: 100%;
-  font-size: 18px;
+  font-size: 10px;
   font-family: 'Cairo', sans-serif;
   font-weight: 600;
   text-align: center;
@@ -70,7 +42,7 @@
   font-size: 12px;
   font-family: 'Cairo', sans-serif;
 }
-.popup-fig-left {
+.popup-left {
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
@@ -78,10 +50,10 @@
   top: 46px;
   z-index: 100;
   left: 0;
-  width: 100%;
+  width: 230px;
   border-radius: 8px;
 }
-.popup-fig-right {
+.popup-right {
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
@@ -89,10 +61,10 @@
   top: 46px;
   z-index: 100;
   right: 0;
-  width: 100%;
+  width: 230px;
   border-radius: 8px;
 }
-.popup-fig-right-special {
+.popup-right-special {
   position: absolute;
   padding: 14px;
   background-color: #ffffff;
@@ -100,16 +72,16 @@
   top: 46px;
   z-index: 100;
   left: 0;
-  width: 150%;
+  width: 350px;
   border-radius: 8px;
 }
-.popup-fig-right-special::before {
+.popup-right-special::before {
   content: '';
   position: absolute;
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 25px;
+  left: 18px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;
@@ -118,13 +90,13 @@
   -webkit-filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
   filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
 }
-.popup-fig-right::before {
+.popup-right::before {
   content: '';
   position: absolute;
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 25px;
+  left: 153px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;
@@ -133,13 +105,13 @@
   -webkit-filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
   filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
 }
-.popup-fig-left::before {
+.popup-left::before {
   content: '';
   position: absolute;
   width: 0;
   height: 0;
   bottom: 100%;
-  left: 25px;
+  left: 19px;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom: 0.75rem solid #fff;
