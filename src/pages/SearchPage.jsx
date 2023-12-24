@@ -17,14 +17,19 @@ const SearchPage = () => {
       </div>
       <AddressComp />
       <div className="container">
-        <div className="row mt-3">
-          <ProductComp />
-          <SideBar />
-          <ProductComp />
-          <ProductComp />
-          <ProductComp />
-          <ProductComp />
+        <div className="row">
+          <div className="col-8 mt-3">
+            <ProductComp />
+            <ProductComp />
+            <ProductComp />
+            <ProductComp />
+            <ProductComp />
+          </div>
+          <div className="col-4 mt-3">
+            <SideBar />
+          </div>
         </div>
+
         <Pagination />
       </div>
     </div>

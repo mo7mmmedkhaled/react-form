@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './FormCard.css';
 import { BsCaretDownFill, BsCaretUpFill } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
@@ -8,6 +8,7 @@ import CountRoomPop from '../CountRoomPop/CountRoomPop';
 import DistancePop from '../DistancePop/DistancePop';
 import PricePop from '../PricePop/PricePop';
 import { Link } from 'react-router-dom';
+import { data } from '../../assets/dataSearchValue';
 // import { data } from '../../assets/dataSearchValue';
 
 const FormCard = () => {
@@ -23,6 +24,23 @@ const FormCard = () => {
   const [contantE, setContentE] = useState('للبيع');
 
   const [inputvalue, setInputValue] = useState('');
+  const [inputToogle, setnputToogle] = useState(true);
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setToogle(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   // useEffect(() => {
   //   // Attach click event listener to the document
@@ -111,6 +129,7 @@ const FormCard = () => {
       return;
     }
   };
+
   // const handleDocumentClick = (event) => {
   //   // Check if the click is outside the pop-up
   //   console.log('Document Clicked');
@@ -124,12 +143,21 @@ const FormCard = () => {
   //   }
   // };
 
+  const locationHandeller = (event) => {
+    setInputValue(event.target.innerHTML);
+    setnputToogle(!inputToogle);
+  };
+
   return (
     <div className="main-form">
       <div className="col-xlg-7 col-lg-7 col-md-9">
         <div className="col-12 branch-form">
           <div className="row">
-            <div id="popup" className="col-lg-3 col-md-6 position-relative">
+            <div
+              id="popup"
+              ref={dropdownRef}
+              className="col-lg-3 col-md-6 position-relative"
+            >
               <div className="input-form" onClick={clickHandeller1}>
                 <span>{contantE}</span>
                 {toogle1 ? (
@@ -151,15 +179,28 @@ const FormCard = () => {
                     type="text"
                     placeholder="أدخل الموقع"
                     className="location-input"
-                    onChange={(e) => setInputValue(e.target.value)}
+                    onChange={(e) => {
+                      setInputValue(e.target.value);
+                      setnputToogle(true);
+                    }}
                     value={inputvalue}
                   />
                 </span>
                 <MdLocationOn className="icon" />
               </div>
-              {inputvalue && (
+              {inputvalue && inputToogle && (
                 <div className="popup-fig-right-special col-12">
-                  {inputvalue}
+                  {
+                    <ul>
+                      {data
+                        .filter((item) => item.startsWith(inputvalue))
+                        .map((item, index) => (
+                          <li key={index} onClick={locationHandeller}>
+                            {item}
+                          </li>
+                        ))}
+                    </ul>
+                  }
                 </div>
               )}
             </div>

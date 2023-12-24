@@ -7,6 +7,7 @@ import CountRoomPop from '../../CountRoomPop/CountRoomPop';
 import DistancePop from '../../DistancePop/DistancePop';
 import PricePop from '../../PricePop/PricePop';
 import './SearchBar.css';
+import { data } from '../../../assets/dataSearchValue';
 
 const SearchBar = () => {
   const [toogle1, setToogle] = useState(false);
@@ -100,6 +101,8 @@ const SearchBar = () => {
     }
   };
 
+  const locationHandeller = () => {};
+
   return (
     <div className="container">
       <div className="row">
@@ -132,7 +135,19 @@ const SearchBar = () => {
             <MdLocationOn className="icon-2" />
           </div>
           {inputvalue && (
-            <div className="popup-fig-right-special col-12">{inputvalue}</div>
+            <div className="popup-fig-right-special col-12">
+              {
+                <ul>
+                  {data
+                    .filter((item) => item.startsWith(inputvalue))
+                    .map((item, index) => (
+                      <li key={index} onClick={locationHandeller}>
+                        {item}
+                      </li>
+                    ))}
+                </ul>
+              }
+            </div>
           )}
         </div>
         <div id="popup" className="col-2 position-relative">

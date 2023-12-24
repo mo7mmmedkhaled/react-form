@@ -25,26 +25,26 @@ const PricePop = (props) => {
       <div className="row">
         <div className="col-6">
           <input
-            type="text"
+            type="number"
             className="inp"
             placeholder="أقل سعر"
             id="message"
             name="أقل سعر"
             onChange={handleChange1}
             value={inp1}
-            min="10000"
+            min="100000"
           />
         </div>
         <div className="col-6">
           <input
-            type="text"
+            type="number"
             className="inp"
             placeholder="أعلى سعر"
             id="message"
             name="أعلى سعر"
             onChange={handleChange2}
             value={inp2}
-            max="10000000"
+            max="100000000"
           />
         </div>
       </div>

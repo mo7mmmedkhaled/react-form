@@ -23,27 +23,28 @@ const SideBar = () => {
   };
 
   return (
-    <div className="col-4 pe-5">
+    <div className="col-12 pe-5">
       <div className="col-12">
         <div className="card-title">
           <span className="title">نتائج مقترحة</span>
         </div>
         <ul>
-          <li>
-            <a href="/">عقارات استوديو للبيع في مَصر</a>
-          </li>
-          <li>
-            <a href="/">عقارات 1 غرفة نوم للبيع في مَصر</a>
-          </li>
-          <li>
-            <a href="/">عقارات 2 غرفة نوم للبيع في مَصر</a>
-          </li>
-          <li>
-            <a href="/">عقارات 3 غرف نوم للبيع في مَصر</a>
-          </li>
-          <li>
-            <a href="/">عقارات 4 غرف نوم للبيع في مَصر</a>
-          </li>
+          {all_Address.map((item, index) => {
+            if (!moreAdd && item.id <= 4) {
+              return (
+                <li key={index}>
+                  <a href="/">{item.title}</a>
+                </li>
+              );
+            } else if (moreAdd) {
+              return (
+                <li key={index}>
+                  <a href="/">{item.title}</a>
+                </li>
+              ); // or you can omit this line, as returning null won't render anything
+            }
+            return null;
+          })}
         </ul>
         <div className="col-12">
           <div onClick={moreHandeller} className="more-content">

@@ -25,24 +25,28 @@ const DistancePop = (props) => {
       <div className="row">
         <div className="col-6">
           <input
-            type="text"
+            type="number"
             className="inp"
             placeholder="أقل مساحة"
             id="message"
             name="أقل مساحة"
             onChange={handleChange1}
             value={inp1}
+            min="70"
+            max="1000"
           />
         </div>
         <div className="col-6">
           <input
-            type="text"
+            type="number"
             className="inp"
             placeholder="أكبر مساحة"
             id="message"
             name="أكبر مساحة"
             onChange={handleChange2}
             value={inp2}
+            min="70"
+            max="1000"
           />
         </div>
       </div>

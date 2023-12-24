@@ -9,7 +9,7 @@ const all_Address = [
   { id: 4, title: 'الإسكندرية', num: 747 },
   { id: 5, title: 'السويس', num: 1 },
   { id: 6, title: 'البحر الأحمر', num: 1 },
-  { id: 7, title: 'الدقهلية', num: 16.214 },
+  { id: 7, title: 'المحله الكبري', num: 16.214 },
   { id: 8, title: 'جنوب سيناء', num: 8 },
   { id: 9, title: 'الوادي الجديد', num: 7 },
   { id: 10, title: 'كفر الشيخ', num: 1 },

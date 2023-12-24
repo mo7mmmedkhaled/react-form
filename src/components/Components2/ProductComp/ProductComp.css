@@ -13,3 +13,27 @@ img {
   border: 1px solid rgb(145, 145, 145);
   margin-bottom: 20px;
 }
+.discription-house {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.price-house {
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.aria-house {
+  font-family: 'Cairo', sans-serif;
+  text-decoration: underline;
+}
+.loaction-product {
+  font-family: 'Cairo', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+.title-house {
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
