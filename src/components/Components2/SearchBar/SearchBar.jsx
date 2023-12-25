@@ -22,6 +22,7 @@ const SearchBar = () => {
   const [contantE, setContentE] = useState('للبيع');
 
   const [inputvalue, setInputValue] = useState('');
+  const [inputToogle, setnputToogle] = useState(true);
 
   const clickHandeller1 = () => {
     setToogle(!toogle1);
@@ -29,6 +30,7 @@ const SearchBar = () => {
     setToogleB(false);
     setToogleC(false);
     setToogleD(false);
+    setnputToogle(false);
   };
 
   const clickHandeller2 = () => {
@@ -37,6 +39,7 @@ const SearchBar = () => {
     setToogleB(false);
     setToogleC(false);
     setToogleD(false);
+    setnputToogle(false);
   };
   const clickHandeller3 = () => {
     setToogleB(!toogle3);
@@ -44,6 +47,7 @@ const SearchBar = () => {
     setToogleA(false);
     setToogleC(false);
     setToogleD(false);
+    setnputToogle(false);
   };
   const clickHandeller4 = () => {
     setToogleC(!toogle4);
@@ -51,9 +55,18 @@ const SearchBar = () => {
     setToogleA(false);
     setToogleB(false);
     setToogleD(false);
+    setnputToogle(false);
   };
   const clickHandeller5 = () => {
     setToogleD(!toogle5);
+    setToogle(false);
+    setToogleA(false);
+    setToogleB(false);
+    setToogleC(false);
+    setnputToogle(false);
+  };
+  const clickHandeller6 = () => {
+    setToogleD(false);
     setToogle(false);
     setToogleA(false);
     setToogleB(false);
@@ -87,7 +100,9 @@ const SearchBar = () => {
   const DestanceFun = (item4, item5) => {
     if (item4 && item5) {
       setToogleC(false);
-      setContentB(`${item4},${item5}`);
+      setContentB(
+        `${item4} '\u0645\u062A\u0631 \u0645\u0631\u0628\u0639' - ${item5} '\u0645\u062A\u0631 \u0645\u0631\u0628\u0639'`
+      );
     } else {
       return;
     }
@@ -95,13 +110,16 @@ const SearchBar = () => {
   const priceFun = (item6, item7) => {
     if (item6 && item7) {
       setToogleD(false);
-      setContentD(`${item6},${item7}`);
+      setContentD(`${item6} "ج.م" - ${item7} "ج.م"`);
     } else {
       return;
     }
   };
 
-  const locationHandeller = () => {};
+  const locationHandeller = (event) => {
+    setInputValue(event.target.innerHTML);
+    setnputToogle(!inputToogle);
+  };
 
   return (
     <div className="container">
@@ -128,13 +146,17 @@ const SearchBar = () => {
                 type="text"
                 placeholder="أدخل الموقع"
                 className="location-input"
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => {
+                  setnputToogle(true);
+                  setInputValue(e.target.value);
+                }}
+                onClick={clickHandeller6}
                 value={inputvalue}
               />
             </span>
             <MdLocationOn className="icon-2" />
           </div>
-          {inputvalue && (
+          {inputvalue && inputToogle && (
             <div className="popup-fig-right-special col-12">
               {
                 <ul>

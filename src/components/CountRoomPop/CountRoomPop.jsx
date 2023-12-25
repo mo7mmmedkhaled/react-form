@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 
 const CountRoomPop = (props) => {
-  const [select, setSelect] = useState(null);
-  const [activeItem, setActiveItem] = useState();
+  const [select1, setSelect1] = useState([]);
+  const [activeItem, setActiveItem] = useState([]);
 
   const handleItemClick = (item) => {
-    setActiveItem(item.id);
-    setSelect(item.name);
+    setActiveItem([...activeItem, item.id]);
+    setSelect1([...select1, item.name]);
+    if (activeItem.find((element) => element === item.id)) {
+      setActiveItem(activeItem.filter((items) => items !== item.id));
+      setSelect1(select1.filter((items) => items !== item.name));
+    }
   };
   const DoneHandeller = () => {
-    props.donehand(select);
+    props.donehand(select1);
   };
   const items2 = [
     { id: 8, name: 'استوديو' },
@@ -41,7 +45,7 @@ const CountRoomPop = (props) => {
               <li
                 key={index}
                 className={`sinle-Item ${
-                  item.id === activeItem ? 'active-chose' : ''
+                  activeItem.includes(item.id) ? 'active-chose' : ''
                 }`}
                 onClick={() => handleItemClick(item)}
               >
@@ -57,7 +61,7 @@ const CountRoomPop = (props) => {
               <li
                 key={index}
                 className={`sinle-Item ${
-                  item.id === activeItem ? 'active-chose' : ''
+                  activeItem.includes(item.id) ? 'active-chose' : ''
                 }`}
                 onClick={() => handleItemClick(item)}
               >

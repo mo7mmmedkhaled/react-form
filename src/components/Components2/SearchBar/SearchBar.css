@@ -18,6 +18,22 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
 
+.button-1 span {
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+  padding: 0px 10px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
 .location-input {
   border: none;
   width: 100%;
